@@ -31,6 +31,9 @@ PlayerCell.prototype.calcMergeTime = function(base) {
 
 PlayerCell.prototype.onConsume = function(consumer,gameServer) {
     consumer.addMass(this.mass);
+	consumer.owner.color = this.color;
+		consumer.owner.team = this.team;
+
 }
 
 PlayerCell.prototype.onAdd = function(gameServer) {
